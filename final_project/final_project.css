@@ -1,0 +1,267 @@
+:root {
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+    --background: #052b20;
+    --bg: #380c43;
+    --surface: #1c4e2c;
+    --elevated: #16202A;
+
+    --text: #E6EEF8;         /* основной текст (почти белый) */
+    --muted: #99A4B3;        /* вторичный текст / подписи */
+
+    --primary: #82ff6c;      /* основной акцент (CTA) */
+    --primary-hover: #2ee85f;
+    --accent: #f4d31d;
+
+    --color-dark-grey: rgba(255,255,255,0.06);  
+    --color-light-grey: rgba(255,255,255,0.10); 
+    --color-grey: #99A4B3;                      
+    --color-white: #E6EEF8;                    
+    --btn-text-dark: #06102a;                  
+
+    --font-size-medium: 24px;
+    --font-size-large: 36px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: var(--text); /* изменено: тёмная тема — основной светлый текст */
+}
+
+body{
+    background-color: var(--background);
+}
+/* Общие CSS-правила */
+
+.wrapper {
+    width: 83.625%;
+    margin: 0 auto;
+}
+
+.flex-container-justify-between-align-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Стили для header */
+.container-header {
+    padding-top: 55px;
+    padding-bottom: 50.5px;
+}
+
+.navigation {
+    gap: 40px;
+}
+
+.navigation a {
+    font-weight: var(--font-weight-medium);
+    font-size: 20px;
+    color: var(--muted); /* изменено: использует вторичный (светлый) цвет */
+    transition: all 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--color-white); /* изменено: при наведении — ярче */
+}
+
+.container-header>a:nth-of-type(1) {
+    font-size: var(--font-size-large);
+}
+
+.grey-logo {
+    color: var(--muted); /* изменено: мягкий светлый серый */
+}
+
+.container-header>a:nth-of-type(2) {
+    font-size: var(--font-size-medium);
+    padding: 17px 57px;
+    border: 2px solid var(--color-dark-grey); /* изменено: тонкая светлая рамка */
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.container-header>a:nth-of-type(2):hover {
+    background-color: var(--color-light-grey); /* изменено: лёгкая подсветка */
+}
+
+
+/* Стили для learn-lang */
+
+.container-learn-lang {
+    padding-top: 50.5px;
+    padding-bottom: 73.5px;
+}
+
+
+
+/* 1338 */
+/* 40,807% */
+/* 45,413% */
+.container-learn-lang div:first-child {
+    width: 40.807%;
+}
+
+.container-learn-lang .girl-learn {
+    width: 45.413%;
+}
+
+.container-learn-lang .flex-container-column .header-learn-section {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.container-learn-lang h1 {
+    font-weight: var(--font-weight-bold);
+    font-size: 64px;
+    line-height: 125%;
+}
+
+.container-learn-lang p {
+    font-size: var(--font-size-medium);
+    color: var(--color-grey); /* изменено: вторичный цвет для описаний */
+    margin-bottom: 61px;
+}
+
+.container-learn-lang a {
+    font-size: var(--font-size-large);
+    color: var(--color-white); /* кнопка: светлый текст */
+    border-radius: 15px;
+    background-color: var(--color-dark-grey); /* тонкий фон для CTA (подсветка) */
+    padding: 32px 117px;
+    align-self: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.container-learn-lang a:hover {
+    transform: rotate(5deg);
+}
+
+
+/* Стили для skills */
+
+.container {
+    padding: 40px 0px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skills>* {
+    background-color: var(--surface); /* изменено: карточки — тёмная поверхность */
+    border-radius: 10px;
+    display: flex;
+}
+
+.skills>div:nth-of-type(1) {
+    flex-direction: column;
+    padding: 42px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.skills>div:nth-of-type(2) {
+    flex-direction: column;
+    padding: 42px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.skills>div:nth-of-type(2) img {
+    height: 254.641px;
+}
+
+.skills>div:nth-of-type(3) {
+    flex-direction: column;
+    padding: 42px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.skills>div:nth-of-type(4) {
+    flex-direction: row-reverse;
+    padding: 42px;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+
+.skills h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 80px;
+    color: var(--text); /* изменено: заголовки — основной светлый текст */
+    margin-bottom: 5px;
+}
+
+
+.skills p {
+    /* font-weight: 400; */
+    /* font-size: 16px; */
+    line-height: 24px;
+    color: var(--muted); /* изменено: подписи — вторичный цвет */
+    margin-bottom: 36px;
+}
+
+.skills a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--btn-text-dark); /* изменено: тёмный текст на яркой кнопке */
+    padding: 16px 50px;
+    border-radius: 5px;
+    background-color: var(--primary); /* изменено: кнопка — акцентный синий */
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.skills a:hover {
+    color: var(--btn-text-dark); /* оставляем тёмный текст */
+    border-radius: 0px;
+    background-color: var(--primary-hover); /* изменено: hover — более тёмный акцент */
+}
+
+/* Стили для footer */
+footer {
+    padding-top: 66.5px;
+}
+
+.logo {
+    font-size: var(--font-size-large);
+}
+
+.text-footer,
+.text-footer a {
+    color: var(--muted); /* изменено: вторичный цвет */
+    font-size: var(--font-size-medium);
+}
+
+.text-footer a {
+    transition: all 0.3s ease;
+}
+
+.text-footer a:hover {
+    color: var(--color-white); /* при наведении — ярче */
+}
+
+.block-footer {
+    border-top: 1px solid rgba(230,238,248,0.06); /* изменено: тонкая светлая линия */
+    padding-top: 31px;
+    padding-bottom: 64px;
+}
